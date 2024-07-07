@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/cart1.css">
+</head>
+<body>
+    <header>
+        <a href="./home.jsp" class="logo"><img src="images/logo1.png" alt="logo"></a>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="./home.jsp" class="tags">TRANG CHỦ</a></li>
+                <li><a href="./ao.jsp" class="tags">ÁO</a></li>
+                <li><a href="./quan.jsp" class="tags">QUẦN</a></li>
+                <li><a href="./phukien.jsp" class="tags">PHỤ KIỆN</a></li>
+                <li><a href="./nuochoa.jsp" class="tags">NƯỚC HOA</a></li>
+            </ul>
+        </nav>
+        <form>
+            <div class="search">
+                <span class="search-icon material-symbols-outlined"> search </span>
+                <input class="search-input" type="search" placeholder="Tìm kiếm sản phẩm...">
+            </div>
+        </form>
+        <c:if test="${empty usersession}">
+            <a href="./login.jsp" class="logicon"><img src="images/user1.png" alt="user" ></a>
+            <a href="./cart.jsp" class="carticon"><img src="images/shopping-bag.png" alt="cart" ></a>
+            </c:if>
+        <c:if test="${not empty usersession}">
+        <a href="./loginSucc.jsp" class="logicon"><img src="images/user1.png" alt="user" ></a>
+            <a href="./cart.jsp" class="carticon"><img src="images/shopping-bag.png" alt="cart" ></a>
+            </c:if>
+
+    </header>
+    <div class="bigcart">
+        <form class="cart" action="">
+            <div class="form">
+
+                <h1>Thông tin vận chuyển</h1>
+                <input class="inp" type="text" placeholder="Họ và tên" size="40"> <br>
+                <input class="inp" type="text" placeholder="Số điện thoại" size="40"> <br>
+                <input class="inp" type="text" placeholder="Địa chỉ (Ví dụ: 103 Vạn Phúc)" size="40"> <br>
+                <input class="inp" type="text" placeholder="Ghi chú thêm" size="40"> <br>
+                <br>
+                <hr>
+                <h1>Hình thức thanh toán</h1>
+                <div class="inp1">
+                    <input type="radio" id="cod" name="tt" value="COD" checked="checked">
+                    <label for="cod"><img src="images/cod.png" alt="" width="10%">COD - Thanh toán khi nhận hàng</label><br>
+                </div>
+                <div class="inp1">
+                    <input type="radio" id="momo" name="tt" value="Momo">
+                    <label for="momo"><img src="images/momo.png" alt="" width="10%">Thanh toán Momo</label><br>
+                </div>
+                <div class="inp1">      
+                    <input type="radio" id="qr" name="tt" value="QR">
+                    <label for="qr"><img src="images/qr.jpg" alt="" width="10%">Thanh toán QR code</label><br>
+                </div>
+
+            </div>
+
+            <div class="list">
+                <h1>Giỏ hàng</h1>
+                <ul>
+                    <li></li>
+                </ul>
+                <hr>
+                <form action="">
+                    <input class="liinp" type="text" name="voucher" id="" placeholder="Nhập mã giảm giá" size="40" style="background-color: lightgrey;">
+                    
+                </form>
+                
+                <h3>Tạm tính</h3>
+                <h3>Giảm giá</h3>
+                <h3>Phí giao hàng</h3>
+                <hr>
+                <h2>Tổng</h2>
+                <input class="ttoan" type="submit" value="THANH TOÁN">
+            </div>
+
+            <footer>
+                <div class="comment">
+                    <p>STOREE luôn lắng nghe bạn! <br>
+                        Chúng tôi luôn trân trọng và mong đợi nhận được ý kiến đóng góp từ
+                        <br> khách hàng để có thể nâng cao trải nghiệm dịch vụ và sản phấm tốt hơn nữa <br>
+                        <input class="button-comment" type="button" value="Đóng Góp Ý Kiến">
+                    </p>
+        
+                </div>
+        
+                <div class="ttll">
+                    <div class="foot1">
+                        <img src="images/phone-call.png" alt="hotline" style="width: 60px; ">
+                        <h3 style="color: aliceblue;"> Hotline: 0999.999.999 </h3>
+                    </div>
+                    <div class="foot1">
+                        <img src="images/mail.png" alt="email">
+                        <h3 style="color: aliceblue;"> Email: storee@email.com </h3>
+                    </div>
+                </div>
+        
+                <div class="social">
+                    <img src="images/tiktok.png" alt="tiktok">
+                    <img src="images/facebook.png" alt="fb">
+                    <img src="images/instagram.png" alt="ins">
+                </div>
+            </footer>  
+</body>
+</html>

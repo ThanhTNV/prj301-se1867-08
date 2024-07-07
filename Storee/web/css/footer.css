@@ -1,0 +1,60 @@
+/* CSS for footer */
+footer {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0px;
+    height: 100%;
+}
+
+footer p {
+    color: #ffffff;
+    margin-bottom:0;
+}
+
+.comment {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 0 30px;
+}
+
+.comment p {
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.social {
+    padding: 50px 100px;
+}
+
+.button-comment {
+    background-color: rgb(48, 191, 235);
+    border-radius: 28px;
+    padding: 15px;
+    font-size: 18px;
+    margin-top: 25px;
+}
+
+.button-comment:hover{
+    background-color: white;
+}
+
+.foot1{
+    display: flex;
+    align-items: center;
+}
+
+.foot1 h3{
+    padding-left: 15px;
+    font-size: 24px;
+}
+
+.ttll{
+    padding-top: 30px;
+}
+
+.social img{
+    padding: 20px 12px 12px 0;
+}
+
+/* End footer */
